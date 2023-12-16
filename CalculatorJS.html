@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator using JavaScript</title>
+</head>
+<body>
+    <input type="number" placeholder="Enter the number" name="first" id="first" step="any"  />
+    <select id="ope" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" placeholder="Enter the number" name="secound" id="secound" step="any" />
+
+    <br/>
+    <br/>
+    <button onclick="cal()">Calculate</button>
+    <input t ype="text" placeholder="Addition of number is" name=""  id="res" readonly="" />
+</body>
+
+
+<script type="text/javascript">
+function cal(){ 
+    var opr1 = document.getElementById('first').value;
+    var opr2 = document.getElementById('secound').value;
+    var ope= document.getElementById('ope').value;
+
+
+    if(ope=='+'){
+        var res = parseInt(opr1) + parseInt(opr2);
+    }
+
+if(ope=='-'){
+    var res=parseInt(opr1) - parseInt(opr2);
+}
+
+if(ope=='*'){
+        var res = parseInt(opr1) * parseInt(opr2);
+    }
+
+if(ope=='/'){  
+    var res=parseInt(opr1) / parseInt(opr2);
+}
+
+document.getElementById('res').value = res;
+}
+</script>
+
+</html>
